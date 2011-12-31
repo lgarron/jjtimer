@@ -1,24 +1,59 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
-body { width: 100%; height: 100%; margin: 0; padding: 0; }
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background: #EEE;
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+div {
+	order: 1px solid #FFF;
+	margin: 8px;
+}
 #timer_label {
-	font-family: 'Droid Sans Mono', sans-serif;
+	font-family: Monaco, monospace, Courier, sans-serif;
 	font-weight: bold;
 	font-size: 5em;
+	padding: 10px;
+
+	text-align: center;
+	background: #CCC;
+	border: 4px solid #888;
+	margin-bottom: 8px;
 }
 #centre_div {
-	width: 700px; height: 500px;
-	position: absolute; left: 50%; top: 50%;
-	margin: -250px 0 0 -350px; 
+	width: 700px;
+	position: absolute; left: 50%; top: 10%;
+	margin: 0px 0 0 -350px; 
 }
 #scramble_label {
+	text-align: center;
+	font-size: 200%;
 	font-weight: bold;
-	margin: auto 0 auto 0;
+	margin: 0px 10%;
+}
+#penalties {
+	text-align: center;
+	padding: 8px;
 }
 .a span {
 	color: blue;
 	cursor: pointer;
-	text-decoration: underline;
+
+	text-decoration: none;
+	border: 1px solid #88F;
+	background: #ACE;
+	padding: 2px 4px;
+	border-radius: 8px;
 }
+.a span:hover {
+	background: #CDE;
+}
+.g, .a, #stats_label, #options_label, #options_panel {
+	margin: 8px 15%;
+}	
 .g {
 	color: gray;
 }

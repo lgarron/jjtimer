@@ -166,8 +166,10 @@ var ui = function() {
 	render_body: function() {
 		var out = '<div id="centre_div">'+
               '<div id="info"></div>'+
-              '<div id="timer_label">0.00</div><div class="a"><span id="p2">+2</span> <span id="dnf">DNF</span></div>'+
+              '<div id="timer_label">0.00</div>'+
               '<div id="scramble_label"></div>'+
+              '<hr>'+
+              '<div class="a" id="penalties">Last solve: <span id="p2">+2</span> <span id="dnf">DNF</span></div>'+
               '<div id="times_label" class="a"></div>'+
               '<div id="stats_label">'+
               'times: <span id="s_t">0</span><br />'+
