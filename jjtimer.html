@@ -7,6 +7,21 @@
 <script type="text/javascript" src="timer.js"></script>
 <script type="text/javascript" src="scrambler.js"></script>
 <script type="text/javascript" src="ui.js"></script>
+<script>
+// These two listeners will reload the page if the manifest has changed.
+// This code should be used on any page that should refresh itself immediately if it is stale.
+if (typeof window.applicationCache !== "undefined") {
+  window.applicationCache.addEventListener('updateready', function() {
+    window.applicationCache.swapCache();
+    setTimeout(function() {location.reload(true)}, 1000);
+  }, false);
+
+  window.applicationCache.addEventListener('downloading', function() {
+    document.body.innerHTML="<center><br><br><h1>Updating cache...<br><br>Page will reload in a moment.</h1><br></center>";
+    document.body.style.setProperty("background", "#888");
+  }, false);
+}
+</script>
 </head>
 <body>
 </body>
